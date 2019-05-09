@@ -1,0 +1,22 @@
+<div id="NoteInput" class="container">
+    <textarea row="4" id="body"></textarea>
+</div>
+
+<div class="container">
+    {{#each Articles}}
+    <br>
+    <div class="row">
+        <div class="col-8">
+            Title: {{title}} <br>
+            Summary: {{body}} <br>
+            Link: <a href="{{link}}">Link</a> {{_id}}
+        </div>
+        <div class="col-4">
+            <p>Note Here</p> <button class="noteBtn" data-id="{{_id}}">Change Note</button>
+            ~~~~~~~~~~~~~~~~~~~~~~~~ <br>
+            {{notes.body}}
+        </div>
+    </div> <br> <br>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    {{/each}}
+</div>
