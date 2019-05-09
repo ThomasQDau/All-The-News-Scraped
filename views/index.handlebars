@@ -1,5 +1,8 @@
-<div id="NoteInput" class="container">
-    <textarea row="4" id="body"></textarea>
+<div id="NoteInput">
+    <div id="boxInput">
+        <textarea style="resize: none;" row="4" id="body"></textarea>
+        <button id="submit">Update Note!</button>
+    </div>
 </div>
 
 <div class="container">
@@ -14,7 +17,7 @@
         <div class="col-4">
             <p>Note Here</p> <button class="noteBtn" data-id="{{_id}}">Change Note</button>
             ~~~~~~~~~~~~~~~~~~~~~~~~ <br>
-            {{notes.body}}
+            <div id="{{_id}}">{{notes.body}}</div>
         </div>
     </div> <br> <br>
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

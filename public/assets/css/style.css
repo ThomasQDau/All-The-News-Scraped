@@ -1,0 +1,18 @@
+#NoteInput {
+    width: 300px;
+    height: 150px;
+    z-index: 2;
+    background-color: white;
+    left: 800px;
+    top: 400px;
+    position: fixed;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+#boxInput {
+    padding: 25px;
+    background-color: white;
+    opacity: 1;
+    z-index: 2;
+    margin: 0 auto;
+}

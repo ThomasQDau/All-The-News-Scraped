@@ -51,15 +51,16 @@ app.get("/", function (req, res) {
 //   })
 // });
 
-// app.post("/articles/:id", function (req, res) {
-//   db.Note.create(req.body).then(function (data) {
-//     console.log('Data 1: ', data);
-//     db.Article.updateOne({_id: req.params.id}, {$set: {note: data._id}}).then(function(data2) {
-//       console.log('Data 2: ', data2);
-//       res.end();  
-//     })
-//   })
-// });
+app.post("/", function (req, res) {
+  db.Notes.create({body: req.body.note}).then(function (data) {
+    console.log('Data 1: ', data);
+    console.log(req.body.id);
+    db.Articles.updateOne({_id: req.body.id}, {$set: {notes: data._id}}).then(function(data2) {
+      console.log('Data 2: ', data2);
+      res.end();  
+    })
+  })
+});
 
 app.listen(PORT, function () {
   console.log("App running on port " + PORT + "!");
